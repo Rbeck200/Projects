@@ -143,11 +143,21 @@ int longestSentence(string text) {
 
 int main(){
 
-	//ALL COMMENTED OUT FUNCTIONS HAVE BEEN TESTED TO WORK.
+	//ALL COMMENTED OUT FUNCTION HAVE BEEN TESTED TO WORK.
+
+	//#1
 	//readfile("tinypix.ppm");
+
+	//#2
 	//computeAverage("test3.txt", "test3output.txt");
+
+	//#7
 	//numberOfSentences("This has one sentence");
 	//numberOfSentences("This. has. multiple. sentences.");
+
+	//#8
+	//longestSentence("This. has multiple. sentences and the last one is the longest.");
+
 
 	return 0;
 }
