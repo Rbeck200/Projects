@@ -4,6 +4,7 @@
 #include <fstream>
 #include <sstream>
 #include <exception>
+#include <iomanip>
 using namespace std;
 
 //#1 ALL GOOD
@@ -75,9 +76,16 @@ void computeAverage(string input_file, string output_file) {
 	output.close();
 }
 
-//#4
+//#4 ALL GOOD
 void displayNumbers(vector<double>& data) {
-
+	for (int i = 0; i < data.size(); i++) {
+		if ((i % 3 == 0) && (i != 0)) {
+			cout << endl;
+		}
+		cout << fixed;
+		cout << setprecision(2);
+		cout << setw(8) << data[i];
+	}
 }
 
 //#7
@@ -107,7 +115,7 @@ int numberOfSentences(string text) {
 
 //#8
 int longestSentence(string text) {
-	int position = 0;
+	int sentence_length = 0;
 	vector<string> lines{};
 	vector<vector<string>> words{};
 	istringstream input{ text };
@@ -133,12 +141,12 @@ int longestSentence(string text) {
 		words.push_back(sentences);
 	}
 	for (int i = 0; i < words.size(); i++) {
-		if (words[i].size() > position) {
-			position = words[i].size();
+		if (words[i].size() > sentence_length) {
+			sentence_length = words[i].size();
 		}
 	}
-	cout << "(" << position << ") " << endl << text << endl;
-	return position;
+	cout << "(" << sentence_length << ") " << endl << text << endl;
+	return sentence_length;
 }
 
 int main(){
@@ -146,10 +154,23 @@ int main(){
 	//ALL COMMENTED OUT FUNCTION HAVE BEEN TESTED TO WORK.
 
 	//#1
-	//readfile("tinypix.ppm");
+	//FizzBuzz();
 
 	//#2
+	//readfile("tinypix.ppm");
+
+	//#3
 	//computeAverage("test3.txt", "test3output.txt");
+
+	//#4
+	/*vector<double> question_four{ 123.45,
+		4.56,
+		78.90,
+		98.76,
+		54.32,
+		1.01 };
+	displayNumbers(question_four);
+	*/
 
 	//#7
 	//numberOfSentences("This has one sentence");
@@ -161,4 +182,5 @@ int main(){
 
 	return 0;
 }
+
 
