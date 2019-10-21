@@ -12,14 +12,11 @@ void FizzBuzz() {
 	for (int i = 1; i <= 100; i++) {
 		if ((i % 3 == 0) && (i % 5 == 0)) {
 			cout << "FizzBuzz" << endl;
-		}
-		else if (i % 3 == 0) {
+		}else if (i % 3 == 0) {
 			cout << "Fizz" << endl;
-		}
-		else if (i % 5 == 0) {
+		}else if (i % 5 == 0) {
 			cout << "Buzz" << endl;
-		}
-		else {
+		}else {
 			cout << i << endl;
 		}
 	}
@@ -46,74 +43,48 @@ void readfile(const string& file_name) {
 //#3 ALL GOOD
 void computeAverage(string input_file, string output_file) {
 	ifstream input{ input_file };
-	vector<string> line_data;
+	ofstream output{ output_file };
 	vector<int> numbers{};
 	int sum = 0;
 	int avg = 0;
-	if (input.is_open() == true) {
-		string line;
-		while (input.good() == true) {
-			getline(input, line);
-			if (line.length() > 0) {
-				line_data.push_back(line);
-			}
-		}
-	}
-	for (int i = 0; i < line_data.size(); i++) {
-		istringstream data{ line_data[i] };
-		while (data.eof() == false) {
-			int num = 0;
-			data >> num;
-			numbers.push_back(num);
-		}
+	while (input.good() == true) {
+		int value = 0;
+		input >> value;
+		numbers.push_back(value);
 	}
 	for (int i = 0; i < numbers.size(); i++) {
 		sum += numbers[i];
 	}
 	avg = (sum / numbers.size());
-	ofstream output{ output_file };
 	output << avg;
 	output.close();
 }
 
 //#4 ALL GOOD
 void displayNumbers(vector<double>& data) {
+	cout << fixed;
+	cout << setprecision(2);
 	for (int i = 0; i < data.size(); i++) {
 		if ((i % 3 == 0) && (i != 0)) {
 			cout << endl;
 		}
-		cout << fixed;
-		cout << setprecision(2);
 		cout << setw(8) << data[i];
 	}
 }
 
-//#7
+//#7 ALL GOOD
 int numberOfSentences(string text) {
-	vector<string> line_data{};
-	istringstream input{ text };
-	while (input.good() == true) {
-		string temp;
-		if (input.peek() != ' ') {
-			getline(input, temp, '.');
-			if (temp.length() > 0) {
-				line_data.push_back(temp);
-			}
+	int num_sentences = 0;
+	for (int i = 0; i < text.length(); i++) {
+		if ((text[i] == '.') && (i != 0)) {
+			num_sentences++;
 		}
-		else {
-			string _space;
-			_space = input.get();
-		}
+		cout << "(" << num_sentences << ")" << endl << text;
+		return num_sentences;
 	}
-	cout << "(" << line_data.size() << ") sentence";
-	if (line_data.size() > 1) {
-		cout << "s";
-	}
-	cout << " " << endl << text << endl;
-	return line_data.size();
 }
 
-//#8
+//#8 ALL GOOD
 int longestSentence(string text) {
 	int sentence_length = 0;
 	vector<string> lines{};
@@ -163,14 +134,15 @@ int main(){
 	//computeAverage("test3.txt", "test3output.txt");
 
 	//#4
-	/*vector<double> question_four{ 123.45,
+	/*
+	vector<double> question_four{ 123.45,
 		4.56,
 		78.90,
 		98.76,
 		54.32,
 		1.01 };
 	displayNumbers(question_four);
-	*/
+	//*/
 
 	//#7
 	//numberOfSentences("This has one sentence");
@@ -183,4 +155,6 @@ int main(){
 	return 0;
 }
 
-
+/*catch (const string msg) {
+			cerr << msg << endl;
+		}*/
