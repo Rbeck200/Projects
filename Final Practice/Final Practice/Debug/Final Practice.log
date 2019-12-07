@@ -1,0 +1,14 @@
+﻿  main.cpp
+C:\Users\Paral\source\repos\Final Practice\Final Practice\main.cpp(13,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Paral\source\repos\Final Practice\Final Practice\main.cpp(24,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Paral\source\repos\Final Practice\Final Practice\main.cpp(26,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Paral\source\repos\Final Practice\Final Practice\main.cpp(55,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Paral\source\repos\Final Practice\Final Practice\main.cpp(62,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Paral\source\repos\Final Practice\Final Practice\main.cpp(75,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Paral\source\repos\Final Practice\Final Practice\main.cpp(76,25): warning C4018: '>': signed/unsigned mismatch
+C:\Users\Paral\source\repos\Final Practice\Final Practice\main.cpp(102,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Paral\source\repos\Final Practice\Final Practice\main.cpp(112,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Paral\source\repos\Final Practice\Final Practice\main.cpp(113,23): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Paral\source\repos\Final Practice\Final Practice\main.cpp(114,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Paral\source\repos\Final Practice\Final Practice\main.cpp(137,20): warning C4018: '<': signed/unsigned mismatch
+  Final Practice.vcxproj -> C:\Users\Paral\source\repos\Final Practice\Debug\Final Practice.exe

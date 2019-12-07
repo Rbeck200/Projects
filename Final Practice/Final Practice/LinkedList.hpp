@@ -3,6 +3,8 @@
 #include <vector>
 #include "ListNode.hpp"
 
+using namespace std;
+
 template<typename DATA_TYPE>
 class LinkedList {
 public:

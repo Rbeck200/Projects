@@ -129,6 +129,9 @@
     <ClInclude Include="LinkedList.hpp" />
     <ClInclude Include="ListNode.hpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="numbers.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
